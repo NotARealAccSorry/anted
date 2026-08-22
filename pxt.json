@@ -2,7 +2,14 @@
     "name": "Anted ",
     "description": "A roguelike ant game",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Arcade Easing - Copy": "github:ChimbroDaPro/arcade-easing#v1.0.0",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-fancy-text": "github:riknoll/arcade-fancy-text#v0.2.2",
+        "carnival": "github:microsoft/arcade-carnival#v0.0.7",
+        "arcade-state-transitions": "github:riknoll/arcade-state-transitions#v0.1.2",
+        "pxt-javascript-extras": "github:WoofWoofCodes/pxt-javascript-extras#v0.5.3",
+        "arcade-drawing-utils": "github:riknoll/arcade-drawing-utils#v0.1.1"
     },
     "files": [
         "main.blocks",
