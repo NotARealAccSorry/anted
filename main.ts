@@ -1,6 +1,3 @@
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
 function Dialogue (Text: string) {
     DialogueText = fancyText.create(Text, 150, 15, fancyText.geometric_sans_7)
     DialogueCursor = sprites.create(img`
@@ -34,22 +31,27 @@ function Dialogue (Text: string) {
 }
 stateTransitions.onStateEvent(stateTransitions.TransitionEvent.Enter, "Battle", function () {
     AntQueen = sprites.create(img`
-        . . . . . f f f f . . . . . . . 
-        . . . . f e e e e f . . . . . . 
-        . . . . f e f f f f . . . . . . 
-        . . . . f e f f f f . . . . . . 
-        . . . . . f f f f . . . . . . . 
-        . . f . . . f f . . . f . . . . 
-        . . . f f f e e f f f . . . . . 
-        . . . . . f e f f . . . . . . . 
-        . . . f f f e f f f f . . . . . 
-        . . f . . . f f . . . f . . . . 
-        . . . . f f e e f f . . . . . . 
-        . . . f f e f f f f f . . . . . 
-        . . f . f e f f f f . f . . . . 
-        . . . . f e f f f f . . . . . . 
-        . . . . . f e f f . . . . . . . 
-        . . . . . . f f . . . . . . . . 
+        . . . f f f f f . . . 
+        . . f 8 8 8 e e f . . 
+        . . f e f f f f f . . 
+        . . f e f f f f f . . 
+        . . f e f f f f f . . 
+        . . . f f f f f . . . 
+        f . . . f f f . . . f 
+        . f f f 8 8 e f f f . 
+        . . . f e f f f . . . 
+        . f f f e f f f f f . 
+        f . . . f f f . . . f 
+        . . f f 8 e f f f . . 
+        . f f 8 e f f f f f . 
+        f . f e f f f f f . f 
+        . . f e f f f f f . . 
+        . . f e f f f f f . . 
+        . . f e f f f f f . . 
+        . . . f e e f f . . . 
+        . . . . f f f . . . . 
+        . . . . . f . . . . . 
+        . . . . . f . . . . . 
         `, SpriteKind.Player)
     controller.moveSprite(AntQueen)
     Antlion = sprites.create(img`
