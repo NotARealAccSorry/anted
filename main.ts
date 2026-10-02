@@ -96,7 +96,6 @@ function GenerateAntlionAttacks () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 `, SpriteKind.Player)
-            PitSprite.setPosition(Antlion.x, Antlion.x)
             pauseUntil(() => !(easing.isEasing(sprite)))
             for (let PitGenIndex = 0; PitGenIndex <= 17; PitGenIndex++) {
                 Pit = img`
@@ -150,6 +149,7 @@ function GenerateAntlionAttacks () {
                 drawing.drawCircle(Pit, drawing.DrawMode.Outline, drawing.createPoint(20, 20), PitGenIndex - 15, 12)
                 drawing.drawCircle(Pit, drawing.DrawMode.Fill, drawing.createPoint(20, 20), PitGenIndex - 15, 12)
                 PitSprite.setImage(Pit)
+                PitSprite.setPosition(Antlion.x, Antlion.y)
                 for (let index = 0; index < 2; index++) {
                     createdirt()
                     spriteutils.setVelocityAtAngle(Dirt, spriteutils.degreesToRadians(PitGenIndex * 30 + randint(-30, 30)), 30)
@@ -158,7 +158,7 @@ function GenerateAntlionAttacks () {
                 spriteutils.setVelocityAtAngle(Dirt, spriteutils.degreesToRadians(PitGenIndex * 30 + 180), 60)
                 pause(100)
             }
-            pause(400)
+            pause(1000)
             for (let index = 0; index < 2; index++) {
                 for (let DirtGenIndex = 0; DirtGenIndex <= 8; DirtGenIndex++) {
                     createdirt()
